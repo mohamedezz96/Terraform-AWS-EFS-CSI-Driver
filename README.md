@@ -37,7 +37,7 @@ To get started, follow these instructions:
 - `aws_efs_csi_driver_role_name`: The name of the IAM role that will be created for the EFS CSI Driver controller.
 - `aws_efs_controller_sa_name`: The name of the Kubernetes serviceaccount that will be created for the EFS CSI Driver controller.
 - `aws_efs_node_sa_name`: The name of the Kubernetes serviceaccount that will be created for the EFS CSI Driver Node.
-- `values_file`: The path to the YAML file containing additional configuration values for the ALB controller.
+- `values_file`: The path to the YAML file containing additional configuration values for the AWS EFS CSI Driver.
 
 ### Deployment
 
