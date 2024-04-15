@@ -60,7 +60,8 @@ storageClasses:
     reclaimPolicy: Delete
     volumeBindingMode: Immediate
 ```
-
+- `fileSystemId`: File System ID you have Created, Follow This Link for creating one:
+                  https://github.com/kubernetes-sigs/aws-efs-csi-driver/blob/master/docs/efs-create-filesystem.md
 ### Deployment
 
 Once configured, you can deploy the ALB controller by running:
