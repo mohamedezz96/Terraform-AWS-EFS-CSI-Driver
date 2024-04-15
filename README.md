@@ -72,6 +72,5 @@ terraform plan
 terraform apply --auto-approve
 ```
 
-
-
-
+### Usage
+To test your driver follow this link: https://github.com/kubernetes-sigs/aws-efs-csi-driver/blob/master/examples/kubernetes/dynamic_provisioning/README.md
