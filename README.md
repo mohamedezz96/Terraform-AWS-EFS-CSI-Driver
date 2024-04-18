@@ -124,6 +124,11 @@ pvc-73a13bb1-5372-4fc8-8143-91f16144d3b2   5Gi        RWX            Delete     
 ```bash
 kubectl get pvc
 ```
+   the output should be like this:
+   ```bash
+NAME        STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
+efs-claim   Bound    pvc-73a13bb1-5372-4fc8-8143-91f16144d3b2   5Gi        RWX            efs-sc         <unset>                 12m
+   ```
 5. Check the status of your application:
 ```bash
 kubectl get pods -o wide
