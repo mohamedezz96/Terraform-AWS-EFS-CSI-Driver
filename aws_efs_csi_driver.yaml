@@ -15,5 +15,5 @@ storageClasses:
       basePath: "/dynamic_provisioning"
       subPathPattern: "/subPath"
       ensureUniqueDirectory: "true"
-    reclaimPolicy: Delete
+    reclaimPolicy: Retain
     volumeBindingMode: Immediate
