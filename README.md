@@ -121,7 +121,7 @@ To test your driver follow the following steps:
    ```bash
    NAME                                       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM               STORAGECLASS   VOLUMEATTRIBUTESCLASS   REASON   AGE
 pvc-73a13bb1-5372-4fc8-8143-91f16144d3b2   5Gi        RWX            Delete           Bound    default/efs-claim   efs-sc         <unset>                          7m41s
-   ```
+```
     
 4. Check the status of your pvc:
 ```bash
