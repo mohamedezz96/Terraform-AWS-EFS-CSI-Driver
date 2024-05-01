@@ -111,7 +111,7 @@ To test your driver follow the following steps:
         - name: persistent-storage
           persistentVolumeClaim:
             claimName: efs-claim
-```
+    ```
 
 3. Check that there is a pv created on your cluster:
 ```bash
