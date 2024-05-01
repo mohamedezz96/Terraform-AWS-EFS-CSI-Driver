@@ -123,15 +123,16 @@ NAME                                       CAPACITY   ACCESS MODES   RECLAIM POL
 pvc-c517e00d-dfa1-4609-99d8-e7d2599cf3bc   5Gi        RWX            Retain           Bound    default/efs-claim   efs-sc         <unset>
 ```
     
-5. Check the status of your pvc:
+4. Check the status of your pvc:
     ```bash
     kubectl get pvc
     ```
    the output should be like this:
-   ```bash
+```bash
 NAME        STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   VOLUMEATTRIBUTESCLASS   AGE
 efs-claim   Bound    pvc-73a13bb1-5372-4fc8-8143-91f16144d3b2   5Gi        RWX            efs-sc         <unset>                 12m
-   ```
+```
+
 5. Check the status of your application:
 ```bash
 kubectl get pods -o wide
