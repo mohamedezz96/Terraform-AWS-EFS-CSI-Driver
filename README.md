@@ -133,3 +133,8 @@ efs-claim   Bound    pvc-73a13bb1-5372-4fc8-8143-91f16144d3b2   5Gi        RWX  
 ```bash
 kubectl get pods -o wide
 ```
+   the output should be like this:
+   ```bash
+NAME      READY   STATUS    RESTARTS   AGE     IP             NODE                            NOMINATED NODE   READINESS GATES
+efs-app   1/1     Running   0          2m52s   172.31.65.57   ip-172-31-70-202.ec2.internal   <none>           <none>
+   ```
