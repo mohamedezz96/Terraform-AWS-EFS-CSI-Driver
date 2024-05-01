@@ -134,9 +134,9 @@ efs-claim   Bound    pvc-73a13bb1-5372-4fc8-8143-91f16144d3b2   5Gi        RWX  
 ```
 
 5. Check the status of your application:
-```bash
-kubectl get pods -o wide
-```
+    ```bash
+    kubectl get pods -o wide
+    ```
    the output should be like this:
    ```bash
 NAME      READY   STATUS    RESTARTS   AGE     IP             NODE                            NOMINATED NODE   READINESS GATES
