@@ -56,15 +56,15 @@ To get started, follow these instructions:
         ```
         - `fileSystemId`: File System ID you have Created, Follow This Link for creating one:
                           https://github.com/kubernetes-sigs/aws-efs-csi-driver/blob/master/docs/efs-create-filesystem.md
-### Deployment
+4. Install: 
 
-Once configured, you can deploy the ALB controller by running:
-
-```bash
-terraform init
-terraform plan
-terraform apply --auto-approve
-```
+    Once configured, you can install the EFS CSI Driver by running:
+    
+    ```bash
+    terraform init
+    terraform plan
+    terraform apply --auto-approve
+    ```
 
 ### Usage
 To test your driver follow the following steps:
