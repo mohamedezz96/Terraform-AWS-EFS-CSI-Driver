@@ -8,7 +8,7 @@ storageClasses:
     - tls
     parameters:
       provisioningMode: "efs-ap"
-      fileSystemId: "fs-036a1cf0df09a061d"
+      fileSystemId: "fs-0c79aff5f515a76ab"
       directoryPerms: "700"
       gidRangeStart: "1000"
       gidRangeEnd: "2000"
