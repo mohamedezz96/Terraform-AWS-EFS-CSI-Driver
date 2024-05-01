@@ -70,47 +70,47 @@ To get started, follow these instructions:
 To test your driver follow the following steps:
 
 1. Apply the following pvc.yaml file on your cluster:
-```bash
-kubectl apply -f pvc.yaml
-```
-#### pvc.yaml
-```yaml
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: efs-claim
-spec:
-  accessModes:
-    - ReadWriteMany
-  storageClassName: efs-sc
-  resources:
-    requests:
-      storage: 5Gi
-```
+    ```bash
+    kubectl apply -f pvc.yaml
+    ```
+    #### pvc.yaml
+    ```yaml
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    metadata:
+      name: efs-claim
+    spec:
+      accessModes:
+        - ReadWriteMany
+      storageClassName: efs-sc
+      resources:
+        requests:
+          storage: 5Gi
+    ```
 
 2. Apply the following pod.yaml file on your cluster:
-```bash
-kubectl apply -f pod.yaml
-```
-#### pod.yaml
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: efs-app
-spec:
-  containers:
-    - name: app
-      image: centos
-      command: ["/bin/sh"]
-      args: ["-c", "while true; do echo $(date -u) >> /data/out; sleep 5; done"]
-      volumeMounts:
+    ```bash
+    kubectl apply -f pod.yaml
+    ```
+    #### pod.yaml
+    ```yaml
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: efs-app
+    spec:
+      containers:
+        - name: app
+          image: centos
+          command: ["/bin/sh"]
+          args: ["-c", "while true; do echo $(date -u) >> /data/out; sleep 5; done"]
+          volumeMounts:
+            - name: persistent-storage
+              mountPath: /data
+      volumes:
         - name: persistent-storage
-          mountPath: /data
-  volumes:
-    - name: persistent-storage
-      persistentVolumeClaim:
-        claimName: efs-claim
+          persistentVolumeClaim:
+            claimName: efs-claim
 ```
 
 3. Check that there is a pv created on your cluster:
