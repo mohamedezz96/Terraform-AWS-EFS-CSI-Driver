@@ -138,3 +138,26 @@ kubectl get pods -o wide
 NAME      READY   STATUS    RESTARTS   AGE     IP             NODE                            NOMINATED NODE   READINESS GATES
 efs-app   1/1     Running   0          2m52s   172.31.65.57   ip-172-31-70-202.ec2.internal   <none>           <none>
    ```
+# Note
+
+## Pod Stuck in ContainerCreating Status
+
+If a Pod doesn't have an IP address listed, make sure that you added a mount target for the subnet that your node is in. Otherwise, the Pod won't leave ContainerCreating status. When an IP address is listed, it may take a few minutes for a Pod to reach the Running status.
+
+## Confirming Data Write to the Volume
+
+To confirm that the data is written to the volume, follow these steps:
+
+1. Execute the following command to access the Pod:
+   ```bash
+   kubectl exec efs-app -- bash -c "cat data/out"
+   ```
+   The example output is as follows.
+   ```bash
+   [...]
+    Tue Mar 23 14:29:16 UTC 2021
+    Tue Mar 23 14:29:21 UTC 2021
+    Tue Mar 23 14:29:26 UTC 2021
+    Tue Mar 23 14:29:31 UTC 2021
+    [...]
+   ```
