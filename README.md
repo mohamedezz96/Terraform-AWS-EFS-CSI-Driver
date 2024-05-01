@@ -28,12 +28,12 @@ To get started, follow these instructions:
     ```bash
     cd Terraform-AWS-EFS-CSI-Driver
     ```
-  ### Configuration
+3. Configurations:
   #### aws_efs_csi_driver.tf
   - `aws_efs_csi_driver_version`: The version of the EFS CSI Driver Helm Chart to use.
   - `values_file`: The path to the YAML file containing additional configuration values for the AWS EFS CSI Driver.
 
-    #### values/aws_efs_csi_driver.yaml
+    ##### aws_efs_csi_driver.yaml
     ```yaml
     storageClasses: 
       - name: efs-sc
