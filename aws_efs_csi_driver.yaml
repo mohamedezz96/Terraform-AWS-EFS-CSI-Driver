@@ -8,7 +8,7 @@ storageClasses:
     - tls
     parameters:
       provisioningMode: "efs-ap"
-      fileSystemId: "fs-004f486fe782c1817"
+      fileSystemId: {{ .Values.terraformOutput.aws_efs_filesystem_id }}
       directoryPerms: "700"
       gidRangeStart: "1000"
       gidRangeEnd: "2000"
