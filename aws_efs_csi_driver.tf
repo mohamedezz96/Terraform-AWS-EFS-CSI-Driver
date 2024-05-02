@@ -5,6 +5,6 @@ module "aws_efs_csi_driver" {
   values_file                         = "./aws_efs_csi_driver.yaml"
   create_efs                          = true
   cluster_name                        = var.cluster_name
-  eks_vpc_id                          = "vpc-0a1b2c3d4e5f6g7h8"
-  eks_worker_node_subnets             = ["subnet-0a1b2c3d4e5f6g7h8", "subnet-0a1b2c3d4e5f6g7h9"]
+  eks_vpc_id                          = "vpc-0e800103104bc9746"
+  eks_worker_node_subnets             = ["subnet-04062694caacec616", "subnet-01ebdb343ec45d1da","subnet-08270493fa020ae2b"]
 }
